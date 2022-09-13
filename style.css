@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    
+}
+
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+#cards {
+    width: 40vw;
+    background: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#frontside, #backside {
+    background-repeat: no-repeat;
+    width: 447px;
+    height: 245px;
+    padding-inline: 20px;
+   
+}
+
+#frontside {
+    background: url(images/bg-card-front.png);   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;     
+    
+}
+
+#name-expire-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#card-expire-date {
+    display: flex;
+}
+
+
+#backside {
+    background: url(images/bg-card-back.png);
+    display: flex;
+    justify-content: end;
+    align-items: center;   
+}
+
+#card-cvc {
+    width: min-content;
+    margin-right: 30px;  
+}
+
+
+form {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    margin: auto;
+    gap: 10px;   
+}
+
+#form-expire-cvc {
+    display: flex;  
+    gap: 15px;
+    
+}
+
+#container-expire-date {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#container-cvc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border:  2px solid hsl(270, 3%, 87%);
+    
+}
+
+button {
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 30px;
+    font-size: inherit;
+}
+
+button:hover {
+    background-color: hsl(278, 60%, 31%);
+}
+
+
+
+#thank-you {
+    display: none;
+    margin: auto;
+    text-align: center;
+}
+
+#thank-you * {
+    margin-block: 15px;
+}
+
+
+
+
+@media(max-width:1130px) {
+
+    body {
+        display: block;
+    }
+
+    #cards {
+        width: 100vw;
+        padding: 20px;
+    }
+
+    form {
+        width: 80vw;
+        margin-block: 50px;
+        gap: 20px;
+        
+    }
+
+    #form-expire-cvc {
+        flex-wrap: wrap;
+    }
+    
+    #margin-for-phone * {
+        margin-bottom: 12px;
+    }
+
+    #submitBtn {
+        margin-bottom: 20px;
+    } 
+}
+
+
+@media(max-width:500px) {
+
+    #frontside, #backside {
+        width: 80vw;
+        border-radius: 10px;
+    }
+
+}
